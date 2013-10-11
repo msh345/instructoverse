@@ -18,8 +18,10 @@
   </tbody>
 </table>
 
-
 <h2>My Favorite Courses</h2>
+<% if current_user.attended_courses.empty? %>
+<p>You don't have any favorites yet.</p>
+<% else %>
 <table>
   <thead>
     <tr>
@@ -36,7 +38,12 @@
     <% end %>
   </tbody>
 </table>
+<% end %> 
+<br>
+<br>
 
+<div class = "_6j mvm _6wk _6wl _58mi _3ma _6o _6v cnc">
+<!-- <div class = "button"> -->
 <%= link_to "Create New Course", new_course_path %>  
-
+</div>
 

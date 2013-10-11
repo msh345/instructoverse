@@ -1,4 +1,6 @@
 class CoursesController < ApplicationController
+  # skip_before_filter :require_login, only: [:index, :show]
+
   def index
     @courses = Course.all
     @user = current_user
