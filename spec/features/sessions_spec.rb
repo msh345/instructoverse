@@ -1,21 +1,8 @@
 require 'spec_helper'
 
-
-describe "Home Page" do
+describe "Login or Signup Page" do
 	before do
 		@user = User.create(username: "tex", email: "tex@fake.com", password: "password", password_confirmation: "password")
-	end
-
-	it "Clicks the 'login or signup' link" do
-	  visit root_path
-	  click_link("Login or Signup")
-	  page.should have_content "Password Confirmation"
-	end
-
-	it "Clicks the 'all courses' link" do
-		visit root_path
-		click_link("All courses")
-		page.should have_content "Available Courses"
 	end
 
 	it "Should signup a user" do
@@ -35,5 +22,6 @@ describe "Home Page" do
 		click_button 'Login'
 		page.should have_content "My Created Courses"
 	end
+
 
 end
