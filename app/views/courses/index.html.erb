@@ -1,7 +1,10 @@
+
+
+<div class ="front_page_text">
 <h1>Available Courses</h1>
 <table>
   <thead>
-    <th>Course Title</th>
+    <!-- <th>Course Title</th> -->
   </thead>
   <tbody>
     <% @courses.each do |course| %>
@@ -9,5 +12,10 @@
     <% end %>
   </tbody>
 </table>
+</div>
+
+<div class="front_page_pic">
+<%= image_tag("tree.png", :class => 'tree') %>
+</div>
 
 
