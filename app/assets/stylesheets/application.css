@@ -17,17 +17,22 @@ h1 {
 } 
 
 body {
-/*  background-color: #CBFDFE;*/ /*light blue
-     color: #426E6F;
- /* @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);  
-  font-family: 'Libre Baskerville', serif;
-*/  
   background-color: #FFF8E7; /**cream*/
   font-family: Futura;
-  color: #5E5E5E; */*/*/
+  color: #5E5E5E; 
 }
 
+label {
+  width:200px;    
+  float:left;
+}
 
+.error {
+/*  position: relative;*/
+  color: #E2492F;
+  float: left;
+  text-align: left;
+}
 
 #errorExplanation {
   display: inline-block;
@@ -38,7 +43,6 @@ body {
   text-shadow: 0 0 1.5em #fff, 0 0 1.5em #fff;
   font-size: 20px;
 }
-
 
 #errorExplanation ul li {
   float: left;
@@ -51,9 +55,28 @@ body {
   float: left;
 }
 
-
 .tree {
   padding-left: 100px;
+/*  width: 50%;*/
+}
+
+.login-signup {
+  width: 30%;
+  size: 30%;
+  position: relative;
+  float: left;
+}
+
+.login_pic img {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+}
+
+.button {
+  background-color: #69a74e;
+  border-radius: 5px;
+  color: white;
 }
 
 ._3ma {
@@ -96,6 +119,3 @@ body {
   color: white;
 }
 
-/*.button {
-  color: white;
-}*/
