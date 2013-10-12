@@ -1,45 +1,58 @@
 <% if current_user %>
-  <p>You're already logged in!</p>
+ 
+  <p class="error">You're already logged in!</p>
+
 <% else %>
 
-<h2>Login</h2>
+  <div class="error"><%= @error if @error%></div>
+    <br>
+    <h2>Login</h2>
+  <div class="login-signup">
+      <%= form_tag login_path, :id => "login" do %>
+        <div class="field_container"><%= label_tag "email", "Email" %></div>
+        <div class="field_container"><%= text_field_tag :email %></div> 
+        <br>
+        <div class="field_container"><%= label_tag "password", "Password" %></div>
+        <div class="field_container"><%= password_field_tag :password %></div> 
+        <br>
+        <div class="field_container"><%= submit_tag "Login", class: "button" %></div> 
+      <% end %>
 
-<p class="error"><%= @error if @error%></p>
-
-  <%= form_tag login_path, :id => "login" do %>
-    <%= label_tag "email", "Email" %>
-    <%= text_field_tag :email %> <br>
-
-    <%= label_tag "password", "Password" %>
-    <%= password_field_tag :password %> <br>
-
-    <%= submit_tag "Login" %>
-
-  <% end %>
 <% end %>
-<p></p>
+
+<br>
+<br>
 
 <h2>Signup</h2>
+
   <%= form_tag users_path, :id => "signup" do %>
-    <%= label_tag "username", "Username" %>
-    <%= text_field_tag "signup[username]" %> <br>
-
-    <%= label_tag "email", "Email" %>
-    <%= text_field_tag "signup[email]" %> <br>
-
-    <%= label_tag 'password', "Password" %>
-    <%= password_field_tag "signup[password]" %> <br>
-
-    <%= label_tag "password_confirmation", "Password Confirmation" %>
-    <%= password_field_tag "signup[password_confirmation]" %> <br>
-
-    <%= submit_tag "Signup" %>
+     <div class="field_container"><%= label_tag "username", "Username" %></div>
+     <div class="field_container"><%= text_field_tag "signup[username]" %></div>
+     <br>
+     <div class="field_container"><%= label_tag "email", "Email" %></div>
+     <div class="field_container"><%= text_field_tag "signup[email]" %></div> 
+     <br>
+     <div class="field_container"><%= label_tag 'password', "Password" %></div>
+     <div class="field_container"><%= password_field_tag "signup[password]" %></div> 
+     <br>
+     <div class="field_container"><%= label_tag "password_confirmation", "Password Confirmation" %></div>
+     <div class="field_container"><%= password_field_tag "signup[password_confirmation]" %></div> 
+     <br>
+     <%= submit_tag "Signup", class: "button" %>
   <% end %>
+</div>
+<br>
 
-<% if @signup_errors %>
-  <ul>
-  <% @signup_errors.each do |error| %>
-    <li class="error"><%= error %></li>
+<div class="error">
+  <% if @signup_errors %>
+    <ul>
+      <% @signup_errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
   <% end %>
-  </ul>
-<% end %>
+</div>
+
+<div class="login_pic">
+  <%= image_tag("tree.png", :class => 'login_pic') %>
+</div>

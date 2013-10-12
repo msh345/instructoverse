@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="top-nav">
-  <h1 class="site-name">Instructoverse</h1>
+   <h1 class="site-name"><a href="/courses/">Instructoverse</a></h1>
     <nav>
       <ul>
         <% if current_user %>
@@ -17,7 +17,7 @@
         <% else %> 
         <li> <%= link_to "Login or Signup", login_path %> </li>
         <% end %>
-        <li> <%= link_to "All courses", courses_path %> </li>
+        <li> <%= link_to "All Courses", courses_path %> </li>
       </ul>
     </nav>
   </div>
@@ -26,3 +26,7 @@
   <div>
 </body>
 </html>
+
+
+
+

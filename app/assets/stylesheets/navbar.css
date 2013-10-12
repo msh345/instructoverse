@@ -2,19 +2,25 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(141, 202, 236);
+  background-color: #8DCAEC;
+/*  background-color: rgb(141, 202, 236);*/
   width: 100%;
   color: white;
   display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-decoration: none;
 }
 
 .top-nav h1 {
   margin:0;
   float: left;
   display: inline;
+  margin-left: 20px;
+  background-color: #8DCAEC;
 }
 
-ul {
+nav ul {
   text-align: center;
   margin:10px;
   display: inline-block;
@@ -22,7 +28,8 @@ ul {
   float:right;
 }
 
-li, a {
+
+nav li, a {
   display: inline;
   padding-right: 15px;
   text-decoration: none;

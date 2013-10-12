@@ -1,24 +1,14 @@
-<%= form_for @course do |f| %>
-  <% if @course.errors.any? %>
- <!--  <div id="errorExplanation">
-    <h4><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h4>
-  <ul>
-    <% @course.errors.full_messages.each do |msg| %>
-      <li><h6><%= msg %></h6></li>
+  <%= form_for @course do |f| %>
+    <div id="errorExplanation">
+      <% if @course.errors.any? %>
+        <%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved: <br>
+        <% @course.errors.full_messages.each do |msg| %>
+          <%= msg %>
+          <br>
+        <% end %>
+        </ul>
     <% end %>
-    </ul>
-  </div> -->
-
-  <div id="errorExplanation">
-    <%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved: <br>
-  
-    <% @course.errors.full_messages.each do |msg| %>
-      <%= msg %> <br>
-    <% end %>
-    </ul>
-  </div>
-
-  <% end %>
+    </div>
 
     <p>
       <%= f.label :title %>
